@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { TemplateVarRefPageComponent } from './template-var-ref-page/template-var-ref-page.component';
 
 export const routes: Routes = [
   {
@@ -61,7 +60,7 @@ export const routes: Routes = [
   },
   {
     path: "session-3",
-    loadComponent: () => import('./template-var-ref/template-var-ref.component').then(m => m.TemplateVarRefComponent),
+    loadComponent: () => import('./session-3/session-3.component').then(m => m.Session3Component),
     title: "Session 3",
   },
   {

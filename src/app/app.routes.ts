@@ -62,6 +62,23 @@ export const routes: Routes = [
     path: "session-3",
     loadComponent: () => import('./session-3/session-3.component').then(m => m.Session3Component),
     title: "Session 3",
+    children: [
+      {
+        path: "",
+        redirectTo: "template-variable-reference",
+        pathMatch: "full",
+      },
+      {
+        path: "template-variable-reference",
+        loadComponent: () => import('./template-var-ref-page/template-var-ref-page.component').then(m => m.TemplateVarRefPageComponent),
+        title: "Session 3 - Template Variable Reference",
+      },
+      {
+        path: "view-child",
+        loadComponent: () => import('./view-child-example/view-child-example.component').then(m => m.ViewChildExampleComponent),
+        title: "Session 3 - View Child Example",
+      },
+    ],
   },
   {
     path: "**",

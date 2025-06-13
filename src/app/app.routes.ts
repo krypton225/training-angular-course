@@ -78,6 +78,11 @@ export const routes: Routes = [
         loadComponent: () => import('./view-child-example/view-child-example.component').then(m => m.ViewChildExampleComponent),
         title: "Session 3 - View Child Example",
       },
+      {
+        path: "view-children",
+        loadComponent: () => import('./view-children-example/view-children-example.component').then(m => m.ViewChildrenExampleComponent),
+        title: "Session 3 - View Children Example",
+      },
     ],
   },
   {

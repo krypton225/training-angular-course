@@ -1,8 +1,4 @@
 import { Routes } from '@angular/router';
-import { OneBindingPageComponent } from './one-binding-page/one-binding-page.component';
-import { TwoBindingPageComponent } from './two-binding-page/two-binding-page.component';
-import { ControlFlowPageComponent } from './control-flow-page/control-flow-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
@@ -18,9 +14,14 @@ export const routes: Routes = [
   },
   {
     path: "one-binding",
-    component: OneBindingPageComponent,
+    loadComponent: () => import('./one-binding-page/one-binding-page.component').then(m => m.OneBindingPageComponent),
     title: "One way data binding",
     children: [
+      {
+        path: "",
+        redirectTo: "interpolation",
+        pathMatch: "full",
+      },
       {
         path: "interpolation",
         component: InterpolationComponent,
@@ -55,17 +56,17 @@ export const routes: Routes = [
   },
   {
     path: "two-binding",
-    component: TwoBindingPageComponent,
+    loadComponent: () => import('./two-binding-page/two-binding-page.component').then(m => m.TwoBindingPageComponent),
     title: "Two way data binding",
   },
   {
     path: "control-flow",
-    component: ControlFlowPageComponent,
+    loadComponent: () => import('./control-flow-page/control-flow-page.component').then(m => m.ControlFlowPageComponent),
     title: "Control flow",
   },
   {
     path: "**",
-    component: NotFoundComponent,
+    loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent),
     title: "Not found",
   },
 ];

@@ -5,10 +5,20 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  color: darkkhaki;
+
+  text-decoration: none;
+}
+
 .container {
   max-inline-size: min(100%, 75rem);
   margin-inline: auto;
   padding-inline: 1rem;
+}
+
+.pt-2rem {
+  padding-block-start: 2rem;
 }
 
 .pb-2rem {
@@ -41,4 +51,16 @@ body {
 
 .has-bg-blue {
   background-color: rgb(78, 78, 166);
+}
+
+.is-active-link {
+  padding-block: 0.5rem;
+  padding-inline: 0.25rem;
+
+  border-radius: 0.25rem;
+
+  background-color: darkkhaki;
+  color: black;
+
+  text-decoration: none;
 }

@@ -13,6 +13,8 @@ export class OneWayBindingComponent {
   hasPaddingBlock: boolean = true;
   hasPaddingInline: boolean = false;
 
+  isCollapsed: boolean = true;
+
   propExample: string = `https://i.pinimg.com/736x/ef/b5/cd/efb5cd5b289ef77b44703fd0fab69a71.jpg`;
 
   buttonHandler(): void {

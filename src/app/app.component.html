@@ -1,15 +1,15 @@
 <div class="container">
-  <ul class="pb-2rem d-flex flex-wrap jc-between ai-center gap-1rem" role="list">
+  <ul class="pt-2rem pb-2rem d-flex flex-wrap jc-between ai-center gap-1rem" role="list">
     <li>
-      <a routerLink="one-binding">One way data binding</a>
+      <a class="link" routerLink="one-binding" [routerLinkActive]="'is-active-link'">One way data binding</a>
     </li>
 
     <li>
-      <a routerLink="two-binding">Two way data binding</a>
+      <a class="link" routerLink="two-binding" [routerLinkActive]="'is-active-link'">Two way data binding</a>
     </li>
 
     <li>
-      <a routerLink="control-flow">Control Flow</a>
+      <a class="link" routerLink="control-flow" [routerLinkActive]="'is-active-link'">Control Flow</a>
     </li>
   </ul>
 

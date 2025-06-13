@@ -7,6 +7,8 @@ import { ICar } from '../../shared/interfaces/car.interface';
   styleUrls: ['./control-flow.component.scss']
 })
 export class ControlFlowComponent {
+  age: number = 26;
+
   cars: ICar[] = [
     {
       make: "Toyota",

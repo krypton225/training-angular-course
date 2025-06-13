@@ -11,6 +11,8 @@
   @if (!($index == ($count - 1))) {
     <hr />
   }
+} @empty {
+  <p>Not items to show here!</p>
 }
 
 @switch (age) {

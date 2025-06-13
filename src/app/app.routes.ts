@@ -1,10 +1,5 @@
 import { Routes } from '@angular/router';
-import { InterpolationComponent } from './interpolation/interpolation.component';
-import { PropertyBindingComponent } from './property-binding/property-binding.component';
-import { EventBindingComponent } from './event-binding/event-binding.component';
-import { ClassBindingComponent } from './class-binding/class-binding.component';
-import { StyleBindingComponent } from './style-binding/style-binding.component';
-import { AttributeBindingComponent } from './attribute-binding/attribute-binding.component';
+import { TemplateVarRefPageComponent } from './template-var-ref-page/template-var-ref-page.component';
 
 export const routes: Routes = [
   {
@@ -24,32 +19,32 @@ export const routes: Routes = [
       },
       {
         path: "interpolation",
-        component: InterpolationComponent,
+        loadComponent: () => import('./interpolation/interpolation.component').then(m => m.InterpolationComponent),
         title: "One way binding - Interpolation",
       },
       {
         path: "property",
-        component: PropertyBindingComponent,
+        loadComponent: () => import('./property-binding/property-binding.component').then(m => m.PropertyBindingComponent),
         title: "One way binding - Property",
       },
       {
         path: "event",
-        component: EventBindingComponent,
+        loadComponent: () => import('./event-binding/event-binding.component').then(m => m.EventBindingComponent),
         title: "One way binding - Event",
       },
       {
         path: "class",
-        component: ClassBindingComponent,
+        loadComponent: () => import('./class-binding/class-binding.component').then(m => m.ClassBindingComponent),
         title: "One way binding - Class",
       },
       {
         path: "style",
-        component: StyleBindingComponent,
+        loadComponent: () => import('./style-binding/style-binding.component').then(m => m.StyleBindingComponent),
         title: "One way binding - Style",
       },
       {
         path: "attribute",
-        component: AttributeBindingComponent,
+        loadComponent: () => import('./attribute-binding/attribute-binding.component').then(m => m.AttributeBindingComponent),
         title: "One way binding - Attribute",
       },
     ],

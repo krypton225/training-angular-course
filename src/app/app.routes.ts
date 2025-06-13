@@ -65,6 +65,11 @@ export const routes: Routes = [
     title: "Control flow",
   },
   {
+    path: "session-3",
+    loadComponent: () => import('./template-var-ref/template-var-ref.component').then(m => m.TemplateVarRefComponent),
+    title: "Session 3",
+  },
+  {
     path: "**",
     loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent),
     title: "Not found",

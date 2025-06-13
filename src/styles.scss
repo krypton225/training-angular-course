@@ -4,3 +4,17 @@ body {
 
   font-family: sans-serif;
 }
+
+.container {
+  max-inline-size: min(100%, 75rem);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.pb-2rem {
+  padding-block-end: 2rem;
+}
+
+.img {
+  max-inline-size: 12rem;
+}

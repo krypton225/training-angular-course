@@ -1,16 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { OneWayBindingComponent } from "./one-way-binding/one-way-binding.component";
-import { TwoWayBindingComponent } from "./two-way-binding/two-way-binding.component";
-import { ControlFlowComponent } from "./control-flow/control-flow.component";
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    OneWayBindingComponent,
-    TwoWayBindingComponent,
-    ControlFlowComponent
+    RouterLink,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

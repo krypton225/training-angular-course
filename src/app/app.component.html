@@ -1,10 +1,17 @@
-<h2>One way data binding examples: </h2>
-<app-one-way-binding></app-one-way-binding>
+<div class="container">
+  <ul class="pb-2rem d-flex jc-between ai-center" role="list">
+    <li>
+      <a routerLink="one-binding">One way data binding</a>
+    </li>
 
-<hr />
+    <li>
+      <a routerLink="two-binding">Two way data binding</a>
+    </li>
 
-<h2>Two way data binding examples: </h2>
-<app-two-way-binding></app-two-way-binding>
+    <li>
+      <a routerLink="control-flow">Control Flow</a>
+    </li>
+  </ul>
 
-<h2>Control flow examples:</h2>
-<app-control-flow></app-control-flow>
+  <router-outlet></router-outlet>
+</div>

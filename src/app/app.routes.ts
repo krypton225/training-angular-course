@@ -94,6 +94,11 @@ export const routes: Routes = [
         loadComponent: () => import('./at-input/at-input.component').then(m => m.AtInputComponent),
         title: "Session 3 - @Input Example",
       },
+      {
+        path: "at-output",
+        loadComponent: () => import('./at-output/at-output.component').then(m => m.AtOutputComponent),
+        title: "Session 3 - @Output Example",
+      },
     ],
   },
   {

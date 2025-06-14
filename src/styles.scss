@@ -41,6 +41,10 @@ a {
   align-items: center;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .gap-1rem {
   gap: 1rem;
 }

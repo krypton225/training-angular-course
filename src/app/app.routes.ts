@@ -89,6 +89,11 @@ export const routes: Routes = [
         loadComponent: () => import('./content-projection-container/content-projection-container.component').then(m => m.ContentProjectionContainerComponent),
         title: "Session 3 - Content Projection Example",
       },
+      {
+        path: "at-input",
+        loadComponent: () => import('./at-input/at-input.component').then(m => m.AtInputComponent),
+        title: "Session 3 - @Input Example",
+      },
     ],
   },
   {

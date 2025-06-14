@@ -1,4 +1,3 @@
-import { ContentProjectionExampleComponent } from './content-projection-example/content-projection-example.component';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [

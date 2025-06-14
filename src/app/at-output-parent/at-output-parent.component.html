@@ -1,0 +1,14 @@
+<app-at-output-child (itemEvent)="allProducts = $event"></app-at-output-child>
+
+<ul class="pt-2rem d-flex gap-1rem flex-wrap" role="list">
+  @for (product of allProducts; track $index) {
+    <li class="d-flex flex-column gap-1rem">
+      <p> ID: {{product.id}} </p>
+      <p> Name: {{product.name}} </p>
+      <p> Price: {{product.price}} </p>
+      <p> Provided? {{product.inStock ? "Yes" : "No"}} </p>
+    </li>
+  } @empty {
+    <p>There is no product to show!</p>
+  }
+</ul>

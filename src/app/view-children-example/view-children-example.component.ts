@@ -1,4 +1,4 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-view-children-example',
@@ -7,6 +7,7 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
   styleUrl: './view-children-example.component.scss'
 })
 export class ViewChildrenExampleComponent {
+  @ViewChild('list') list !: ElementRef<HTMLUListElement>;
   @ViewChildren("pElement") allParagraphs !: QueryList<ElementRef<HTMLParagraphElement>>;
 
   showCustomAttributeValueHandler(): void {
@@ -14,7 +15,7 @@ export class ViewChildrenExampleComponent {
       const element = elementRef.nativeElement;
       const customValue = element.getAttribute('data-value');
 
-      console.log(`${customValue}`);
+      this.list.nativeElement.innerHTML += `<li>${customValue}</li>`
     });
   }
 }

@@ -1,3 +1,4 @@
+import { ContentProjectionExampleComponent } from './content-projection-example/content-projection-example.component';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -82,6 +83,11 @@ export const routes: Routes = [
         path: "view-children",
         loadComponent: () => import('./view-children-example/view-children-example.component').then(m => m.ViewChildrenExampleComponent),
         title: "Session 3 - View Children Example",
+      },
+      {
+        path: "content-projection",
+        loadComponent: () => import('./content-projection-container/content-projection-container.component').then(m => m.ContentProjectionContainerComponent),
+        title: "Session 3 - Content Projection Example",
       },
     ],
   },

@@ -1,0 +1,14 @@
+<div class="post-container">
+  @for (post of postsArray; track $index) {
+    <div class="post">
+      <h3 class="post__title">
+        {{post.title}}
+      </h3>
+
+      <p class="post__body">
+        {{post.body}}
+      </p>
+    </div>
+  }
+</div>
+

@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { PostsService } from '../posts.service';
+import { PostsService } from '../../shared/services/posts.service';
 import { IPost } from '../../shared/interfaces/post';
 
 @Component({

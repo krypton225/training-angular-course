@@ -1,6 +1,7 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { PostsService } from '../../shared/services/posts.service';
 import { IPost } from '../../shared/interfaces/post';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-api-example',
@@ -8,12 +9,14 @@ import { IPost } from '../../shared/interfaces/post';
   templateUrl: './api-example.component.html',
   styleUrl: './api-example.component.scss'
 })
-export class ApiExampleComponent implements OnInit {
+export class ApiExampleComponent implements OnInit, OnDestroy {
   private readonly posts = inject(PostsService);
+  private observer!: Subscription;
+
   postsArray: IPost[] = [];
 
   ngOnInit(): void {
-    this.posts.getAll().subscribe({
+    this.observer = this.posts.getAll().subscribe({
       next: (response) => {
         this.postsArray = response;
       },
@@ -21,5 +24,9 @@ export class ApiExampleComponent implements OnInit {
         console.error(error);
       },
     });
+  }
+
+  ngOnDestroy(): void {
+    this.observer.unsubscribe();
   }
 }

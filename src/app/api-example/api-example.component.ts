@@ -15,7 +15,6 @@ export class ApiExampleComponent implements OnInit {
   ngOnInit(): void {
     this.posts.getAll().subscribe({
       next: (response) => {
-        console.log(response);
         this.postsArray = response;
       },
       error: (error) => {

@@ -59,6 +59,11 @@ export const routes: Routes = [
     title: "Control flow",
   },
   {
+    path: "api-example",
+    loadComponent: () => import('./api-example/api-example.component').then(m => m.ApiExampleComponent),
+    title: "API Example",
+  },
+  {
     path: "session-3",
     loadComponent: () => import('./session-3/session-3.component').then(m => m.Session3Component),
     title: "Session 3",
